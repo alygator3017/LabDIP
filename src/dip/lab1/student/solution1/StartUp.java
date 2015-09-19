@@ -64,6 +64,9 @@ public class StartUp {
         Employee emp1 = new HourlyEmployee(10.50, 2020);
         Employee emp2 = new SalariedEmployee(45000, 1250);
         Employee emp3 = new SalariedEmployee(90000, 0);
+        
+        //just demonstrating something to myself for bottom line. Making sure works.
+        HourlyEmployee emp4 = new HourlyEmployee(8.50, 1012);
 
         System.out.println("Employee 1-");
         System.out.println("Hourly Wage: " + nf.format(emp1.getSalary()));
@@ -76,6 +79,9 @@ public class StartUp {
         System.out.println("Employee 3-");
         System.out.println("Annual Wage: " + nf.format(emp3.getSalary()));
         System.out.println("Annual Wage: " + nf.format(hr.getAnnualWageForEmployee(emp3)));
+        
+        
+        System.out.println(nf.format(hr.getAnnualWageForEmployee(emp4)));
 
     }
 
