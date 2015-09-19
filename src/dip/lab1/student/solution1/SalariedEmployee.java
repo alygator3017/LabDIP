@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package dip.lab1.student.solution1;
 
@@ -9,21 +7,40 @@ package dip.lab1.student.solution1;
  *
  * @author Alyson
  */
-public class SalariedEmployee implements Employee{
+public final class SalariedEmployee implements Employee{
+    private double annualBonus;
+    private double annualSalary;
+    private double annualWage;
 
+    //constructor
+    public SalariedEmployee(double salary, double bonus){
+        setSalary(salary);
+        setAnnualBonus(bonus);
+        
+    }
     @Override
     public void setSalary(double salary) {
-        
+        this.annualSalary = salary;
     }
 
     @Override
     public double getSalary() {
-        return 0.00;
+        return annualSalary;
     }
 
     @Override
     public double getAnnualWages() {
-        return 0.00;
+        annualWage = annualSalary + annualBonus;
+        return annualWage;
     }
     
+    //Annual bonus setter?
+    public final void setAnnualBonus(double annualBonus){
+        this.annualBonus = annualBonus;
+    }
+    
+    //annual bonus getter?
+    public double getAnnualBonus(){
+        return annualBonus;
+    }
 }

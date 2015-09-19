@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package dip.lab1.student.solution1;
 
@@ -10,20 +8,42 @@ package dip.lab1.student.solution1;
  * @author Alyson
  */
 public class HourlyEmployee implements Employee {
+    private double annualHours;
+    private double hourlyRate;
+    private double annualWages;
+    
+    //constructor
+    public HourlyEmployee(double salary, double totalAnnualHours){
+        setSalary(salary);
+        setTotalAnnualHours(totalAnnualHours);
+    }
 
     @Override
-    public void setSalary(double salary) {
-        
+    public final void setSalary(double salary) {
+        this.hourlyRate = salary;
     }
 
     @Override
     public double getSalary() {
-        return 0.00;
+        return hourlyRate;
     }
 
     @Override
     public double getAnnualWages() {
-        return 0.00;
+        annualWages = hourlyRate*annualHours;
+        return annualWages;
     }
+    
+    //annual hours setter
+    private final void setTotalAnnualHours(double totalAnnualHours) {
+        this.annualHours = totalAnnualHours;
+    }
+    
+    //annual hours getter
+    private double getTotalAnnualHours(){
+        return annualHours;
+    }
+    
+    
     
 }
