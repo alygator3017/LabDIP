@@ -9,6 +9,21 @@ package dip.lab1.student.solution1;
  *
  * @author Alyson
  */
-public class HourlyEmployee {
+public class HourlyEmployee implements Employee {
+
+    @Override
+    public void setSalary(double salary) {
+        
+    }
+
+    @Override
+    public double getSalary() {
+        return 0.00;
+    }
+
+    @Override
+    public double getAnnualWages() {
+        return 0.00;
+    }
     
 }
