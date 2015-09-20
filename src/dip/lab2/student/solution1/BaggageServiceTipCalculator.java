@@ -41,7 +41,18 @@ public class BaggageServiceTipCalculator implements TipCalculator{
 
     @Override
     public double getTip() {
-        
+        switch (serviceQuality) {
+            case POOR:
+                tip = baseTipPerBag * bagCount * (1 + serviceQuality.getValue());
+                break;
+            case FAIR:
+                tip = baseTipPerBag * bagCount * (1 + serviceQuality.getValue());
+                break;
+            case GOOD:
+                tip = baseTipPerBag * bagCount * (1 + serviceQuality.getValue());
+                break;    
+        }
+        return tip;
     }
 
     private void setBagCount(int bagCount) {
