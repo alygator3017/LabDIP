@@ -9,31 +9,35 @@ package dip.lab2.student.solution1;
  *
  * @author Alyson
  */
-public class FoodServiceTipCalculator implements TipCalculator{
+public class FoodServiceTipCalculator implements TipCalculator {
 
     private static final double MIN_BILL = 0.00;
-    private static final String BILL_ENTRY_ERR =
-            "Error: bill must be greater than or equal to " + MIN_BILL;
+    private static final String BILL_ENTRY_ERR
+            = "Error: bill must be greater than or equal to " + MIN_BILL;
 
     private double bill;
-    
+
+    private double tip;
+
+    private ServiceQuality serviceQuality;
+
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
         this.setServiceRating(q);
         this.setBill(billAmt);
     }
-    
+
     @Override
-    public void setServiceRating(ServiceQuality q) {
-        
+    public final void setServiceRating(ServiceQuality q) {
+        serviceQuality = q;
     }
 
     @Override
     public ServiceQuality getServiceQuality() {
-        
+        return serviceQuality;
     }
-    
-    public void setBill(double billAmt){
-        if(billAmt < MIN_BILL){
+
+    public final void setBill(double billAmt) {
+        if (billAmt < MIN_BILL) {
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         bill = billAmt;
@@ -41,8 +45,18 @@ public class FoodServiceTipCalculator implements TipCalculator{
 
     @Override
     public double getTip() {
-        
+        switch (serviceQuality) {
+            case POOR:
+                tip = bill * serviceQuality.getValue();
+                break;
+            case FAIR:
+                tip = bill * serviceQuality.getValue();
+                break;
+            case GOOD:
+                tip = bill * serviceQuality.getValue();
+                break;
+        }
+        return tip;
     }
-   
-    
+
 }
