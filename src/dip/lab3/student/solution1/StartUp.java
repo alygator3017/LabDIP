@@ -20,7 +20,7 @@ public class StartUp {
         OutputService output2GUI = new GUIOutput();
 
         //use constructor to pass any slected input and output
-        MessageService message = new MessageService(message1TOTD, output1C);
+        MessageService message = new MessageService(message1TOTD, output2GUI);
         
         //call sendMessage message in order to retrieve message
         message.sendMessage();
