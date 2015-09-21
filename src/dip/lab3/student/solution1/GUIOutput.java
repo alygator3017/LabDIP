@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Alyson
  */
-public class GUIOutput implements Output{
+public class GUIOutput implements OutputService{
 
     @Override
     public void outputLn(String line) {
