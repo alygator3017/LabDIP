@@ -23,7 +23,7 @@ public class MessageService {
     }
     
     //pass the message to the output service
-    public void sendMessage(){
+    public final void sendMessage(){
         //gets the string, whichever that is, from the input
         String line = message.getInput();
         //output

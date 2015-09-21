@@ -24,12 +24,12 @@ public class HourlyEmployee implements Employee {
     }
 
     @Override
-    public double getSalary() {
+    public final double getSalary() {
         return hourlyRate;
     }
 
     @Override
-    public double getAnnualWages() {
+    public final double getAnnualWages() {
         annualWages = hourlyRate*annualHours;
         return annualWages;
     }
@@ -40,7 +40,7 @@ public class HourlyEmployee implements Employee {
     }
     
     //annual hours getter
-    private double getTotalAnnualHours(){
+    private final double getTotalAnnualHours(){
         return annualHours;
     }
     

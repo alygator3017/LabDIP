@@ -11,10 +11,10 @@ import javax.swing.JOptionPane;
  *
  * @author Alyson
  */
-public class GUIOutput implements OutputService{
+public class JOptionPaneOutput implements OutputService{
 
     @Override
-    public void outputLn(String line) {
+    public final void outputLn(String line) {
         JOptionPane.showMessageDialog(null, line);
     }
     

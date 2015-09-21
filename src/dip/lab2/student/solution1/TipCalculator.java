@@ -14,19 +14,7 @@ public interface TipCalculator {
      * ratings.
      */
     public enum ServiceQuality {
-        GOOD(0.20), FAIR(0.15), POOR(0.10);
-        
-        private final double value;
-        
-        private ServiceQuality(double value){
-            this.value = value;
-        }
-        
-        public double getValue(){
-            return value;
-        }
-        
-        
+        GOOD, FAIR, POOR;        
     }
     
     /**

@@ -17,7 +17,7 @@ public class StartUp {
         InputService message2W = new WelcomeMessage();
         //creating output objects
         OutputService output1C = new ConsoleOutput();
-        OutputService output2GUI = new GUIOutput();
+        OutputService output2GUI = new JOptionPaneOutput();
 
         //use constructor to pass any slected input and output
         MessageService message = new MessageService(message1TOTD, output2GUI);

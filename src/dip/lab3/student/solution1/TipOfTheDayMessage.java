@@ -16,7 +16,7 @@ public class TipOfTheDayMessage implements InputService {
     "Stay out of the fire."};
     
     @Override
-    public String getInput(){
+    public final String getInput(){
         //get random tip
         int index = new Random().nextInt(tips.length);
         String ranTipOfDay = (tips[index]);

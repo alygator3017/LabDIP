@@ -28,17 +28,17 @@ public final class SalariedEmployee implements Employee {
     }
 
     @Override
-    public void setSalary(double salary) {
+    public final void setSalary(double salary) {
         this.annualSalary = salary;
     }
 
     @Override
-    public double getSalary() {
+    public final double getSalary() {
         return annualSalary;
     }
 
     @Override
-    public double getAnnualWages() {
+    public final double getAnnualWages() {
         annualWage = annualSalary + annualBonus;
         return annualWage;
     }
@@ -51,7 +51,7 @@ public final class SalariedEmployee implements Employee {
         this.annualBonus = annualBonus;
     }
 
-    public double getAnnualBonus() {
+    public final double getAnnualBonus() {
         return annualBonus;
     }
 }
