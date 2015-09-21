@@ -8,7 +8,7 @@ import java.util.Random;
  *
  * @author Alyson
  */
-public class TipOfTheDayMessage implements InputMessage {
+public class TipOfTheDayMessage implements Input {
     private final String[] tips = {"Don't commit a crime while wearing a Fitbit.",
     "Tomatoes are fruit. They do not belong in fruit salad.", "One seventh"
             + " of your life is speant on monday.", "You never truly understand"
@@ -16,7 +16,7 @@ public class TipOfTheDayMessage implements InputMessage {
     "Stay out of the fire."};
     
     @Override
-    public String getMessage(){
+    public String getInput(){
         //get random tip
         int index = new Random().nextInt(tips.length);
         String ranTipOfDay = (tips[index]);

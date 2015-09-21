@@ -6,10 +6,10 @@ package dip.lab3.student.solution1;
  *
  * @author Alyson
  */
-public class WelcomeMessage implements InputMessage{
+public class WelcomeMessage implements Input{
     private final String welcome = "Welcome! The cake is a lie.";
     @Override
-    public final String getMessage() {
+    public final String getInput() {
      return welcome;   
     }
     
