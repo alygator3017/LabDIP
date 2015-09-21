@@ -1,5 +1,7 @@
-/*
- * 
+/**
+ * Class for SalariedEmployee implementing the Employee interface
+ * deals with an annual salary and bonus
+ *
  */
 package dip.lab1.student.solution1;
 
@@ -7,17 +9,24 @@ package dip.lab1.student.solution1;
  *
  * @author Alyson
  */
-public final class SalariedEmployee implements Employee{
+public final class SalariedEmployee implements Employee {
+
     private double annualBonus;
     private double annualSalary;
     private double annualWage;
 
-    //constructor
-    public SalariedEmployee(double salary, double bonus){
+    /**
+     * constructor
+     *
+     * @param salary double -setSalary
+     * @param bonus double -setAnnualBonus
+     */
+    public SalariedEmployee(double salary, double bonus) {
         setSalary(salary);
         setAnnualBonus(bonus);
-        
+
     }
+
     @Override
     public void setSalary(double salary) {
         this.annualSalary = salary;
@@ -33,14 +42,16 @@ public final class SalariedEmployee implements Employee{
         annualWage = annualSalary + annualBonus;
         return annualWage;
     }
-    
-    //Annual bonus setter?
-    public final void setAnnualBonus(double annualBonus){
+
+    /**
+     *
+     * @param annualBonus double sets to annualBonus property
+     */
+    public final void setAnnualBonus(double annualBonus) {
         this.annualBonus = annualBonus;
     }
-    
-    //annual bonus getter?
-    public double getAnnualBonus(){
+
+    public double getAnnualBonus() {
         return annualBonus;
     }
 }

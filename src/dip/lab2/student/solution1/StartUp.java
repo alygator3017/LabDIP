@@ -1,4 +1,5 @@
 /*
+ *StartUp class for tip calculator
  */
 package dip.lab2.student.solution1;
 
@@ -14,8 +15,10 @@ public class StartUp {
     public static void main(String[] args) {
         Tip tip = new Tip();
 
-        // Just utility code to format numbers nice. -copied this from 
-        //the example code if you didn't mind.
+        /*
+         * Just utility code to format numbers nice. -copied this from 
+         * the example code if you didn't mind. 
+         */
         NumberFormat nf = NumberFormat.getCurrencyInstance();
 
         TipCalculator fsTip = new FoodServiceTipCalculator(ServiceQuality.GOOD, 32.56);

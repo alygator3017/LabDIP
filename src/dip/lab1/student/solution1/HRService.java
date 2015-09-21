@@ -16,8 +16,8 @@ public class HRService {
     //I'll check on that later).
     
     
-    public double getAnnualWageForEmployee(Employee e){
-        return e.getAnnualWages();
+    public double getAnnualWageForEmployee(Employee employee){
+        return employee.getAnnualWages();
     }
     
 }
