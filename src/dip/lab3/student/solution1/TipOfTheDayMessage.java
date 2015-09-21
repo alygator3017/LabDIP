@@ -9,7 +9,7 @@ import java.util.Random;
  * @author Alyson
  */
 public class TipOfTheDayMessage implements InputMessage {
-    private static final String[] tips = {"Don't commit a crime while wearing a Fitbit.",
+    private final String[] tips = {"Don't commit a crime while wearing a Fitbit.",
     "Tomatoes are fruit. They do not belong in fruit salad.", "One seventh"
             + " of your life is speant on monday.", "You never truly understand"
             + " something until you can explain it to your Grandmother.", 
