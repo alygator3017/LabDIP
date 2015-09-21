@@ -10,6 +10,9 @@ package dip.lab3.student.solution1;
  * @author Alyson
  */
 public class MessageService {
+    //using input and output to get to the methods in order to pass
+    //whatever line of input is need to output to where ever you want 
+    //to output.
     private InputService message;
     private OutputService output;
     
