@@ -9,10 +9,10 @@ package dip.lab3.student.solution1;
  *
  * @author Alyson
  */
-public class ConsoleOutput implements OutputService{
+public class ConsoleOutput implements MessageOutput{
 
     @Override
-    public final void outputLn(String line) {
+    public final void outputMessage(String line) {
         System.out.println(line);
     }
     

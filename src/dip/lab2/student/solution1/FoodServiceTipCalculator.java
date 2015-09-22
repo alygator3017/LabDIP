@@ -53,7 +53,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
                 tip = bill * fairRate;
                 break;
             case GOOD:
-                tip = bill * poorRate;
+                tip = bill * goodRate;
                 break;
         }
         return tip;

@@ -13,7 +13,7 @@ import java.text.NumberFormat;
 public class StartUp {
 
     public static void main(String[] args) {
-        Tip tip = new Tip();
+        TipService tip = new TipService();
 
         /*
          * Just utility code to format numbers nice. -copied this from 
@@ -33,8 +33,10 @@ public class StartUp {
             new BaggageServiceTipCalculator(ServiceQuality.GOOD, 2)
         };
         
+     
+        
         for(TipCalculator t : tips){
-            System.out.println(nf.format(t.getTip()));
+            System.out.println(nf.format(tip.getTipAmt(t)));
         }
     }
 }

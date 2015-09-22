@@ -13,11 +13,11 @@ public class MessageService {
     //using input and output to get to the methods in order to pass
     //whatever line of input is need to output to where ever you want 
     //to output.
-    private final InputService message;
-    private final OutputService output;
+    private final MessageInput message;
+    private final MessageOutput output;
     
     //create constructor to handle the message and output
-    public MessageService(InputService message, OutputService output){
+    public MessageService(MessageInput message, MessageOutput output){
         this.message = message;
         this.output = output;
     }
@@ -27,7 +27,7 @@ public class MessageService {
         //gets the string, whichever that is, from the input
         String line = message.getInput();
         //output
-        output.outputLn(line);
+        output.outputMessage(line);
         
     }
 }

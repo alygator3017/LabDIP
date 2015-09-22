@@ -1,5 +1,5 @@
-/*
- * 
+/**
+ * HourlyEmployee class implementing Employee interface
  */
 package dip.lab1.student.solution1;
 
@@ -14,17 +14,23 @@ public class HourlyEmployee implements Employee {
     
     //constructor
     public HourlyEmployee(double salary, double totalAnnualHours){
-        setSalary(salary);
+        setHourlyRate(salary);
         setTotalAnnualHours(totalAnnualHours);
     }
 
-    @Override
-    public final void setSalary(double salary) {
+    /**
+     *
+     * @param salary double setting the property
+     */
+    public final void setHourlyRate(double salary) {
         this.hourlyRate = salary;
     }
 
-    @Override
-    public final double getSalary() {
+    /**
+     *
+     * @return hourlyRate
+     */
+    public final double getHourlyRate() {
         return hourlyRate;
     }
 
@@ -34,7 +40,10 @@ public class HourlyEmployee implements Employee {
         return annualWages;
     }
     
-    //annual hours setter
+    /**annual hours setter
+     * 
+     * @param totalAnnualHours 
+     */
     private final void setTotalAnnualHours(double totalAnnualHours) {
         this.annualHours = totalAnnualHours;
     }

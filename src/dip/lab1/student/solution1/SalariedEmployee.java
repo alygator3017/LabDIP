@@ -18,22 +18,25 @@ public final class SalariedEmployee implements Employee {
     /**
      * constructor
      *
-     * @param salary double -setSalary
+     * @param salary double -seAnnualSalary
      * @param bonus double -setAnnualBonus
      */
     public SalariedEmployee(double salary, double bonus) {
-        setSalary(salary);
+        seAnnualSalary(salary);
         setAnnualBonus(bonus);
 
     }
 
-    @Override
-    public final void setSalary(double salary) {
+    /**
+     *
+     * @param salary double
+     */
+    public final void seAnnualSalary(double salary) {
         this.annualSalary = salary;
     }
 
-    @Override
-    public final double getSalary() {
+
+    public final double getAnnualSalary() {
         return annualSalary;
     }
 
